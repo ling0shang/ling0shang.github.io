@@ -1,464 +1,1187 @@
 <!DOCTYPE html>
-
-
-<html lang="zh-CN">
+<html>
+  <!-- meta/link... -->
   
 
-    <head>
-      <meta charset="utf-8" />
-        
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
-      <title>tags |  你好</title>
-  <meta name="generator" content="hexo-theme-ayer">
-      
-      <link rel="shortcut icon" href="/favicon.ico" />
-       
-<link rel="stylesheet" href="/dist/main.css">
 
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
-      />
-      
-<link rel="stylesheet" href="/css/custom.css">
- 
-      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
-       
- 
 
-      <!-- mermaid -->
-      
-    <!-- hexo injector head_end start -->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+  <title>标签 | 全息阁</title>
+
+  
+    
+<link rel="stylesheet" href="/js/aos/aos.css">
+
+  
+
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  
+  
+<link rel="stylesheet" href="/css/animate.min.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="/js/shareJs/share.min.css">
+
+  
+  <style>
+        @media (max-width: 992px) {
+            #waifu {
+                display: none;
+            }
+        }
+    </style>
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+    
+        <script src="/js/valine/av-min@3.0.4.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js"></script>
+    
+<!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --></head>
-  </html>
-</html>
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
-
-<body>
-  <div id="app">
-    
-      <canvas class="fireworks"></canvas>
-      <style>
-        .fireworks {
-          position: fixed;
-          left: 0;
-          top: 0;
-          z-index: 99999;
-          pointer-events: none;
-        }
-      </style>
-      
-      
-    <main class="content on">
-      <section class="outer">
   
-    <h1 class="page-type-title">标签</h1>
-    <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
+  <!-- 依赖于jquery和vue -->
+  <script src="/js/jquery3.5.1.js"></script>
+  <script src="/js/vue2.6.11.js"></script>
   
-</section>
+  <body>
+    <!-- 预加载动画 -->
+    <!-- 页面预加载动画 -->
 
-
-      <footer class="footer">
-  <div class="outer">
-    <ul>
-      <li>
-        Copyrights &copy;
-        2021
-        <i class="ri-heart-fill heart_icon"></i> 零熵
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        
-        由 <a href="https://hexo.io" target="_blank">Hexo</a> 强力驱动
-        <span class="division">|</span>
-        主题 - <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a>
-        
-      </li>
-    </ul>
-    <ul>
-      <li>
-        
-        
-        <span>
-  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
-  <span class="division">|</span>
-  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
-</span>
-        
-      </li>
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      
-    </ul>
-    <ul>
-      <li>
-        <!-- cnzz统计 -->
-        
-        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
-        
-      </li>
-    </ul>
+<div id='loader'>
+  <link rel="stylesheet" href="/js/loaded/index.css" >
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="configure-border-1">
+      <div class="configure-core"></div>
+    </div>
+    <div class="configure-border-2">
+      <div class="configure-core"></div>
+    </div>
+    <div class="loading-word">加载中...</div>
   </div>
-</footer>
-      <div class="float_btns">
-        <div class="totop" id="totop">
-  <i class="ri-arrow-up-line"></i>
 </div>
 
-<div class="todark" id="todark">
-  <i class="ri-moon-line"></i>
+<script>
+  var endLoading = function () {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('DOMContentLoaded',endLoading);
+  
+</script>
+
+    
+    <!-- 判断是否为暗黑风格 -->
+    <!-- 判断是否为黑夜模式 -->
+<script>
+  let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+
+  if (isDark) {
+    $(document.body).addClass('darkModel');
+  }
+</script>
+
+    <!-- 头部导航等 -->
+    
+<header class="header " id="navHeader"
+  style="position: fixed;
+  left: 0; top: 0; z-index: 10;width: 100%;"
+>
+  <div class="header-content">
+    <div class="bars">
+      <div id="appDrawer" class="sidebar-image">
+  <div class="drawer-box-icon">
+    <i class="fa fa-bars" aria-hidden="true" @click="showDialogDrawer"></i>
+  </div>
+  
+  <transition name="fade">
+    <div class="drawer-box_mask" v-cloak style="display: none;" v-show="visible" @click.self="cancelDialogDrawer">
+    </div>
+  </transition>
+  <div class="drawer-box" :class="{'active': visible}">
+    <div class="drawer-box-head bg-color">
+      <img class="drawer-box-head_logo" src="/medias/logo.png" alt="logo">
+      <h3 class="drawer-box-head_title">全息阁</h3>
+      <h5 class="drawer-box-head_desc"></h5>
+    </div>
+    
+    <div class="drawer-box-content">
+      <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+        
+        
+          <li class="drawer-box-content_item">
+            <a target="_blank" rel="noopener" href="https://github.com/ling0shang">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span>Github</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 </div>
 
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDrawer',
+    data: {
+      visible: false,
+      top: 0,
+      openArr: [],
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      isOpen(index) {
+        if (this.openArr.includes(index)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      openOrCloseMenu(curIndex) {
+        const index = this.openArr.indexOf(curIndex);
+        if (index !== -1) {
+          this.openArr.splice(index, 1);
+        } else {
+          this.openArr.push(curIndex);
+        }
+      },
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'width: 100%; height: 100%;overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      }
+    },
+    created() {}
+  })
+</script>
+
+    </div>
+    <div class="blog-title" id="author-avatar">
+      
+        <div class="avatar">
+          <img src="/medias/logo.png" alt="logo">
+        </div>
+      
+      <a href="/" class="logo">全息阁</a>
+    </div>
+    <nav class="navbar">
+      <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="归档">
+                  
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link" title="标签">
+                  
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link" title="分类">
+                  
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+        
+      </ul>
+      
+      
+        <div id="appSearch">
+  <div class="search"  @click="showDialog()"><i class="fa fa-search" aria-hidden="true"></i></div>
+  <transition name="fade">
+    <div class="message-box_wrapper" style="display: none;" v-cloak v-show="dialogVisible" @click.self="cancelDialogVisible()">
+      <div class="message-box animated bounceInDown">
+        <!-- <div class="close" style="overflow: hidden;">
+          <i class="fa fa-close" aria-hidden="true" style="float:right;" @click.self="cancelDialogVisible()"></i>
+        </div> -->
+        <h2>
+          <span>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span class="title">本地搜索</span>
+          </span>
+          <i class="fa fa-close close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
+        </h2>
+        <form class="site-search-form">
+          <input type="text"
+            placeholder="请输入关键字"
+            id="local-search-input" 
+            @click="getSearchFile()"
+            class="st-search-input"
+            v-model="searchInput"
+          />
+        </form>
+        <div class="result-wrapper">
+          <div id="local-search-result" class="local-search-result-cls"></div>
+        </div>
       </div>
-    </main>
-    <aside class="sidebar on">
-      <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-  <div class="logo">
-    <a href="/"><img src="/images/1.png" alt="你好"></a>
-  </div>
-  
-  <ul class="nav nav-main">
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/">主页</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/archives">归档</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/categories">分类</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/tags">标签</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="https://lifeshot.lofter.com/">life</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" target="_blank" rel="noopener" href="https://www.cnblogs.com/ling0shang/">园子</a>
-    </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link" href="/2019/about">关于我</a>
-    </li>
-    
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      
-      <a class="nav-item-link nav-item-search"  title="搜索">
-        <i class="ri-search-line"></i>
-      </a>
-      
-      
-      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-        <i class="ri-rss-line"></i>
-      </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-    </aside>
-    <div id="mask"></div>
-
-<!-- #reward -->
-<div id="reward">
-  <span class="close"><i class="ri-close-line"></i></span>
-  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
-  <div class="reward-box">
-    
-    <div class="reward-item">
-      <img class="reward-img" src="/img/sponsor.jpg">
-      <span class="reward-type">支付宝</span>
     </div>
-    
-    
-    <div class="reward-item">
-      <img class="reward-img" src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/wechat.jpg">
-      <span class="reward-type">微信</span>
-    </div>
-    
-  </div>
+  </transition>
 </div>
-    
-<script src="/js/jquery-2.0.3.min.js"></script>
- 
-<script src="/js/lazyload.min.js"></script>
-
-<!-- Tocbot -->
-
-<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
-
-<script src="/dist/main.js"></script>
-
-<!-- ImageViewer -->
- <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-
+<script src="/js/local_search.js"></script>
 <script>
-    function viewer_init() {
-        let pswpElement = document.querySelectorAll('.pswp')[0];
-        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
-
-        $imgArr.forEach(($em, i) => {
-            $em.onclick = () => {
-                // slider展开状态
-                // todo: 这样不好，后面改成状态
-                if (document.querySelector('.left-col.show')) return
-                let items = []
-                $imgArr.forEach(($em2, i2) => {
-                    let img = $em2.getAttribute('data-idx', i2)
-                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
-                    let title = $em2.getAttribute('alt')
-                    // 获得原图尺寸
-                    const image = new Image()
-                    image.src = src
-                    items.push({
-                        src: src,
-                        w: image.width || $em2.width,
-                        h: image.height || $em2.height,
-                        title: title
-                    })
-                })
-                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
-                    index: parseInt(i)
-                });
-                gallery.init()
-            }
-        })
-    }
-    viewer_init()
-</script> 
-<!-- MathJax -->
- <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-      tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-  });
-
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.6/unpacked/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-  var ayerConfig = {
-    mathjax: true,
-  };
-</script>
-
-<!-- Katex -->
-
-<!-- busuanzi  -->
- 
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
- 
-<!-- ClickLove -->
-
-<!-- ClickBoom1 -->
-
-<script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script>
-
-<script src="/js/clickBoom1.js"></script>
- 
-<!-- ClickBoom2 -->
-
-<!-- CodeCopy -->
- 
-<link rel="stylesheet" href="/css/clipboard.css">
- <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  function wait(callback, seconds) {
-    var timelag = null;
-    timelag = window.setTimeout(callback, seconds);
-  }
-  !function (e, t, a) {
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      $(".article pre code").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appSearch',
+    data: {
+      dialogVisible: false,
+      searchInput: '',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialog() {
+        this.dialogVisible = true;
+        // 防止页面滚动，只能让弹框滚动
+        this.top = $(document).scrollTop()
+        body.style.cssText = 'overflow: hidden;';
+      },
+      getSearchFile() {
+        if (!this.searchInput) {
+          getSearchFile("/search.xml");
         }
-      });
-      clipboard.on('success', function(e) {
-        let $btn = $(e.trigger);
-        $btn.addClass('copied');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-checkbox-circle-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPIED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-checkbox-circle-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
-      clipboard.on('error', function(e) {
-        e.clearSelection();
-        let $btn = $(e.trigger);
-        $btn.addClass('copy-failed');
-        let $icon = $($btn.find('i'));
-        $icon.removeClass('ri-file-copy-2-line');
-        $icon.addClass('ri-time-line');
-        let $span = $($btn.find('span'));
-        $span[0].innerText = 'COPY FAILED';
-        
-        wait(function () { // 等待两秒钟后恢复
-          $icon.removeClass('ri-time-line');
-          $icon.addClass('ri-file-copy-2-line');
-          $span[0].innerText = 'COPY';
-        }, 2000);
-      });
+      },
+      cancelDialogVisible() {
+        this.dialogVisible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+    },
+    created() {}
+  })
+</script>
+<!-- 解决刷新页面闪烁问题，可以在元素上添加display: none, 或者用vue.extend方法，详情：https://blog.csdn.net/qq_31393401/article/details/81017912 -->
+<!-- 下面是搜索基本写法 -->
+<!-- <script type="text/javascript" id="local.search.active">
+  var inputArea = document.querySelector("#local-search-input");
+  inputArea.onclick   = function(){ getSearchFile(); this.onclick = null }
+  inputArea.onkeydown = function(){ if(event.keyCode == 13) return false }
+</script> -->
+
+      
+
+    </nav>
+  </div>
+  
+    <a target="_blank" rel="noopener" href="https://github.com/ling0shang" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  
+  
+    <div id="he-plugin-simple"></div>
+    <script>
+      WIDGET = {
+        CONFIG: {
+          "modules": "012",
+          "background": 5,
+          "tmpColor": "4A4A4A",
+          "tmpSize": 16,
+          "cityColor": "4A4A4A",
+          "citySize": 16,
+          "aqiSize": 16,
+          "weatherIconSize": 24,
+          "alertIconSize": 18,
+          "padding": "10px 10px 10px 10px",
+          "shadow": "1",
+          "language": "auto",
+          "borderRadius": 5,
+          "fixed": "false",
+          "vertical": "middle",
+          "horizontal": "center",
+          "key": "2784dd3fcb1e4f0f9a9b579bf69641f2"
+        }
+      }
+    </script>
+    <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script> 
+    
+
+    <!-- 当头部导航设置为背景透明的时候  -->
+    
+      <script src="/js/header/index.js" data-pjax></script>
+    
+</header>
+
+    <!-- 需要在上面加载的js -->
+    <script>
+    function loadScript(src, cb) {
+        setTimeout(function () {
+            var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            if (cb) script.onload = cb;
+            script.setAttribute('src', src);
+            HEAD.appendChild(script);
+        });
     }
-    initCopyCode();
-  }(window, document);
+
+    //https://github.com/filamentgroup/loadCSS
+    var loadCSS = function (href, before, media, attributes) {
+        var doc = window.document;
+        var ss = doc.createElement("link");
+        var ref;
+        if (before) {
+            ref = before;
+        }
+        else {
+            var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+            ref = refs[refs.length - 1];
+        }
+        var sheets = doc.styleSheets;
+        if (attributes) {
+            for (var attributeName in attributes) {
+                if (attributes.hasOwnProperty(attributeName)) {
+                    ss.setAttribute(attributeName, attributes[attributeName]);
+                }
+            }
+        }
+        ss.rel = "stylesheet";
+        ss.href = href;
+        ss.media = "only x";
+        function ready(cb) {
+            if (doc.body) {
+                return cb();
+            }
+            setTimeout(function () {
+                ready(cb);
+            });
+        }
+        ready(function () {
+            ref.parentNode.insertBefore(ss, (before ? ref : ref.nextSibling));
+        });
+        var onloadcssdefined = function (cb) {
+            var resolvedHref = ss.href;
+            var i = sheets.length;
+            while (i--) {
+                if (sheets[i].href === resolvedHref) {
+                    return cb();
+                }
+            }
+            setTimeout(function () {
+                onloadcssdefined(cb);
+            });
+        };
+        function loadCB() {
+            if (ss.addEventListener) {
+                ss.removeEventListener("load", loadCB);
+            }
+            ss.media = media || "all";
+        }
+        if (ss.addEventListener) {
+            ss.addEventListener("load", loadCB);
+        }
+        ss.onloadcssdefined = onloadcssdefined;
+        onloadcssdefined(loadCB);
+        return ss;
+    };
+    
 </script>
  
-<!-- CanvasBackground -->
- 
-<script src="/js/dz.js"></script>
- 
-<script>
-  if (window.mermaid) {
-    mermaid.initialize({ theme: "forest" });
+
+<!-- 轮播图所需要的js -->
+<script src="/js/swiper/swiper.min.js"></script>
+<script src="/js/swiper/vue-awesome-swiper.js"></script>
+<script src="/js/swiper/swiper.animate1.0.3.min.js"></script>
+
+
+  <script src="/js/vue-typed-js/index.js"></script>
+
+
+<!-- 首页的公告滚动插件的js需要重新加载 -->
+<script src="/js/vue-seamless-scroll/index.js"></script>
+
+<!-- 打字机效果js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+
+    <!-- 内容区域 -->
+    <main class="main" id="pjax-container" style="margin-top: 0;">
+      
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-tags" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+
+<div class="lazyload tags-header" data-original="https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg">
+    <div class="tags-header-title">
+        tags
+    </div>
+    <div class="tags-header-desc">
+    
+        <span class="title" id="tags-header-desc"></span>
+        <script>
+  function typedFn() {
+    const el = '#tags-header-desc';
+    const type = 'tag';
+    let desc = '愿你如风，被人温柔以待'
+    var typed = new Typed(el, {
+      strings: [desc],
+      startDelay: 100,
+      typeSpeed: 100,
+      loop: true,
+      backSpeed: 50,
+      showCursor: true
+    });
   }
+  typedFn();
+</script>
+    
+    </div>
+    <div class="mask-box"></div>
+</div>
+
+
+<div id="tags" class="container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
+            </div>
+            <div class="tag-chips">
+                
+                
+                <a href="/tags/hexo/" title="hexo: 1">
+                    <span class="tag-content"
+                        title="hexo" style="background-color: #FFF;">hexo
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+
+    <!-- 页脚 -->
+    <div class="footer bg-color">
+  <div class="footer-main">
+    <div class="link">
+      
+    </div>
+    <div class="footer-copyright">
+      <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/ling0shang">零熵</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
+
+    </div>
+    <div class="footer-custom">
+      
+    </div>
+    <!-- 不蒜子统计 -->
+    
+      
+  <!-- 不蒜子统计 -->
+  <span id="busuanzi_container_site_pv">
+        <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
+  </span>
+  <span class="post-meta-divider">|</span>
+  <span id="busuanzi_container_site_uv" style='display:none'>
+        <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
+  </span>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+
+    
+  </div>
+</div>
+
+
+    <!-- 渲染暗黑按钮 -->
+    
+      <div class="dark">
+  <div class="dark-content">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+    <!-- <span>关灯</span> -->
+  </div>
+  
+</div>
+
+<script>
+  $(function() {
+    let isDark = JSON.parse(localStorage.getItem('dark'))  || JSON.parse('false');
+    if (isDark) {
+      $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+    }
+    $('.dark').click(function() {
+      if ($(document.body).is('.darkModel')) {
+        $(document.body).removeClass('darkModel');
+        localStorage.setItem('dark', false);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-moon-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      } else {
+        $(document.body).addClass('darkModel');
+        localStorage.setItem('dark', true);
+        $(".dark-content").replaceWith(
+          `
+          <div class='dark-content'>
+            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+          </div>
+          `
+        );
+      }
+    })
+  })
+</script>
+    
+    <!-- 渲染回到顶部按钮 -->
+    
+      <div class="goTop top-btn-color" pointer>
+  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+</div>
+<script src="/js/goTop.js"></script>
+    
+    <!-- 渲染左下角音乐播放器 -->
+    
+      <link rel="stylesheet" href="/js/aplayer/APlayer@1.10.1.min.css">
+<style>
+.aplayer .aplayer-lrc p {
+  
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px !important;
+}
+
+.aplayer .aplayer-lrc p.aplayer-lrc-current {
+  
+  font-size: 15px;
+  color: #42b983;
+}
+
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -66px !important;
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0px !important;
+}
+
+
+</style>
+<meting-js  
+  class=""
+  server="tencent"
+  type="playlist"
+  id="8062553743"
+  fixed='true'
+  autoplay='false'
+  theme='#42b983'
+  loop='all'
+  order='random'
+  preload='auto'
+  volume='0.08'
+  list-folded='true'
+>
+</meting-js>
+
+<!-- <style>
+  #aplayer {
+    position: fixed;
+    left: 0;
+    bottom: 300px;
+  }
+</style> -->
+<script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    
+
+    <!-- 图片放大 -->
+    
+      <script src="/js/fancybox/jquery.fancybox.min.js"></script>
+    
+
+    <!-- 百度解析 -->
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
 </script>
 
+    
+    <!-- 背景彩带 -->
+    
+      <script type="text/javascript" size="100" alpha='0.4' zIndex="-1" src="/js/ribbon.min.js"></script>
+    
+    
+    <script src="/js/app.js" data-pjax></script>
+    
+    <!-- 文章目录所需js -->
+<link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
 
+<script>
+  var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+  var option = {
+    // Where to render the table of contents.
+    tocSelector: '.toc',
+    // Where to grab the headings to build the table of contents.
+    contentSelector: content,
+    // Which headings to grab inside of the contentSelector element.
+    headingSelector: headerEl,
+    scrollSmooth: true,
+    scrollSmoothOffset: -80,
+    headingsOffset: -($(window).height() * 0.4 - 45),
+    positionFixedSelector: '.toc-main',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto',
+  }
+  if ($('.toc').length > 0) {
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init(option);
     
-    <div id="music">
-    
-    
-    
-    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="52"
-        src="//music.163.com/outchain/player?type=2&id=22707008&auto=0&height=32"></iframe>
-</div>
+  }
+
+
+  document.addEventListener('pjax:send', function () {
+    if ($('.toc').length) {
+      tocbot.destroy();
+    }
+  });
+
+  document.addEventListener('pjax:complete', function () {
+    if ($('.toc').length) {
+      tocbot.init(option);
+    }
+  });
+
+  
+</script>
 
 <style>
-    #music {
-        position: fixed;
-        right: 15px;
-        bottom: 0;
-        z-index: 998;
-    }
-</style>
-    
-  </div>
-</body>
+.is-position-fixed {
+  position:sticky !important;
+  top: 74px;
+}
+.toc-main ul {
+  counter-reset: show-list;
+}
+.toc-main ul li::before {
+  content: counter(item)".";
+  display: block;
+  position: absolute;
+  left: 12px;
+  top:0;
+}
+/* .toc > .toc-list {
+  padding-left: 35px;
+}
+.toc>.toc-list li {
+  list-style: decimal;
+}
+.toc-list {
+  padding-left: 25px;
+} */
+</style> 
 
+<!-- 渲染issues标签里的内容 -->
+<script>
+  function loadIssuesJS() {
+    if ($(".post-detail").find(".issues-api").length == 0) {
+      return;
+    } 
+    loadScript('/js/issues/index.js');
+  };
+  $(function () {
+    loadIssuesJS();
+  });
+  document.addEventListener('pjax:complete', function () {
+    if (typeof IssuesAPI == "undefined") {
+      loadIssuesJS();
+    }
+  })
+</script>
+
+<!-- div滚动到显示区域的动画 -->
+
+  <script src="/js/aos/aos.js"></script>
+  <script>
+    // https://github.com/michalsnik/aos
+    var themeOffset = parseInt('120') || 120;
+    var themeDelay = parseInt('0') || 0;
+    var themeDuration = parseInt('400') || 400;
+    var themeEasing = 'ease' || 'ease';
+    var themeOnce = eval('true') || false;
+    var themeMirror = eval('false') || false;
+    var themeAnchorPlacement = 'top-bottom' || 'top-bottom';
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init', // class applied after initialization
+      animatedClassName: 'aos-animate', // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: themeOffset, // offset (in px) from the original trigger point
+      delay: themeDelay, // values from 0 to 3000, with step 50ms
+      duration: themeDuration, // values from 0 to 3000, with step 50ms
+      easing: themeEasing, // default easing for AOS animations
+      once: themeOnce, // whether animation should happen only once - while scrolling down
+      mirror: themeMirror, // whether elements should animate out while scrolling past them
+      anchorPlacement: themeAnchorPlacement, // defines which position of the element regarding to window should trigger the animation
+
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      AOS.refresh();
+    })
+  </script>
+
+
+<!-- 输入框打字特效 -->
+<!-- 输入框打字特效 -->
+
+  <script src="/js/activate-power-mode.js"></script>
+  <script>
+    POWERMODE.colorful = true;  // 打开随机颜色特效
+    POWERMODE.shake = false;    // 关闭输入框抖动
+    document.body.addEventListener('input', POWERMODE);//监听打字事件
+  </script>
+
+
+<!-- markdown代码一键复制功能 -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.css">
+  <script src="https://cdn.jsdelivr.net/npm/v-plugs-ayu/lib/ayu.umd.min.js"></script>
+  <script src="/js/clipboard/clipboard.min.js"></script>
+  <div id="appCopy">
+  </div>
+  <script data-pjax>
+    var vm = new Vue({
+      el: '#appCopy',
+      data: {
+      },
+      computed: {
+      },
+      mounted() {
+        const that = this;
+        var copy = '复制';
+        /* code */
+        var initCopyCode = function () {
+          var copyHtml = '';
+          copyHtml += '<button class="btn-copy" data-clipboard-snippet="" style="position:absolute;top:0;right:0;z-index:1;">';
+          copyHtml += '<i class="fa fa-copy"></i><span>' + copy + '</span>';
+          copyHtml += '</button>';
+          $(".post-detail pre").not('.gutter pre').wrap("<div class='codeBox' style='position:relative;width:100%;'></div>")
+          $(".post-detail pre").not('.gutter pre').before(copyHtml);
+          new ClipboardJS('.btn-copy', {
+            target: function (trigger) {
+              return trigger.nextElementSibling;
+            }
+          });
+        }
+        initCopyCode();
+        $('.btn-copy').unbind('click').bind('click', function () {
+          console.log('888');
+          doSomething();
+        })
+        $(document).unbind('keypress').bind('keypress', function (e) {
+          if (e.ctrlKey && e.keyCode == 67) {
+            console.log('111111111111111');
+            doSomething();
+            // 返回false, 防止重复触发copy事件  
+            // return false;
+          }
+        })
+        //  监听 ctrl + c事件  
+        // $(document).unbind('keypress').bind('keypress', function (e) {
+        //   if (e.ctrlKey && e.keyCode == 67) {
+        //     console.log('111111111111111');
+        //     doSomething();
+        //     // 返回false, 防止重复触发copy事件  
+        //     return false;
+        //   }
+        // })
+
+        // // 鼠标右键的复制事件  
+        // $(document).unbind('copy').bind('copy', function (e) {
+        //   console.log('222222222222222222');
+        //   doSomething();
+        //   // console.log('右键复制 监听成功');
+        // });
+
+        function doSomething() {
+          that.$notify({
+            title: "成功",
+            content: "代码已复制，请遵守相关授权协议。",
+            type: 'success'
+          })
+          // console.log('ctrl + c 监听成功');  
+        }
+      },
+      methods: {
+      },
+      created() { }
+    })
+  </script>
+
+
+<!-- 图片懒加载 -->
+<script src="/js/lazyload/lazyload@1.9.1.js"></script>
+<script data-pjax>
+  $(function () {
+    $("div.lazyload, img.lazyload, a.lazyload").lazyload(
+      {
+        effect: "show",
+        placeholder: "/medias/loading1.gif"    //图片未加载出来时显示的占位图
+      }
+    );
+  });
+</script>
+
+<!-- 评论所需js -->
+
+    
+        <!-- 弹幕所需的css和js -->
+        
+<!-- 具体js，请前往valine/script.ejs查看 -->
+
+        <script>
+  var requiredFields = '';
+  requiredFields = requiredFields.split(',');
+  comment_el = '.comment';
+  let looperValine = null;
+  load_valine = function () {
+    if ($(comment_el).length) {
+      var valine = new Valine({
+        el: '#vcomment',
+        path: window.location.pathname,
+        notify: false,
+        verify: false,
+        app_id: "",
+        app_key: "",
+        placeholder: "客官，说点什么吧",
+        avatar: "",
+        master: "",   //博主邮箱md5
+        tagMeta: ["博主","小伙伴","访客"],     //标识字段名
+        friends: "",
+        metaPlaceholder: { "nick": "昵称/QQ号", "mail": "邮箱" },
+        requiredFields: requiredFields,
+        enableQQ: true,
+      });
+      function debounce(fn) {
+        var timerID = null
+        return function () {
+          var arg = arguments[0]   //获取事件
+          if (timerID) {
+            clearTimeout(timerID)
+          }
+          timerID = setTimeout(function () {
+            fn(arg)              //事件传入函数
+          }, 200)
+        }
+      }
+      //查询评论 valine.Q('*').limit(7) -- 查询所有，限制7条, 下面的的代码是查询当前页面
+      var themeDanmu = eval('false');
+      var themeLoop = eval('false');
+      var themeLooperTime = '5000' || 5000;
+      var speed = '40' || 20;
+      var isBarrager = true;
+      if (themeDanmu == true) {
+        do_barrager();
+        if ($('.danmuBox').length <= 0) {
+          $('.navbar').append('<div class="danmuBox"><div class="danmuBtn open"><span class="danmuCircle"></span><span class="danmuText">弹幕</span></div></div>');
+        }
+        $('.danmuBtn').on('click', debounce(
+          function () {
+            if ($('.danmuBtn').hasClass('open')) {
+              $('.danmuBtn').removeClass('open')
+              clearInterval(looperValine);
+              $.fn.barrager.removeAll();
+            } else {
+              $('.danmuBtn').addClass("open");
+              do_barrager();
+            }
+          }
+        ))
+      }
+      function do_barrager() {
+        isBarrager && valine.Q(window.location.pathname).find().then(function (comments) {
+          // var num = 0; // 可以记录条数，循环调用的时候只取最新的评论放入弹幕中
+          var run_once = true;
+          var looper_time = themeLooperTime;
+          var total = comments.length;
+          // var looper = null;
+          var index = 0;
+          if (total > 0) {
+            barrager();
+          } else {
+            // 当评论数为0的时候，自动关闭弹幕
+            // $('.danmuBtn').removeClass('open');
+          }
+          function barrager() {
+            if (run_once) {
+              //如果是首次执行,则设置一个定时器,并且把首次执行置为false
+              looperValine = setInterval(barrager, looper_time);
+              run_once = false;
+            }
+            var content = comments[index]._serverData.comment;
+            var email = comments[index]._serverData.mail;
+            var link = comments[index]._serverData.link;
+            var newcontent = content.substring(0, 50).replace(/<[^>]+>/g, "");
+            //发布一个弹幕
+            const item = {
+              img: `https://q1.qlogo.cn/g?b=qq&nk=${email}&s=640`, //图片 
+              info: newcontent, //文字 
+              href: link, //链接 
+              close: true, //显示关闭按钮 
+              speed: speed, //延迟,单位秒,默认6 
+              color: '#fff', //颜色,默认白色 
+              old_ie_color: '#000000', //ie低版兼容色,不能与网页背景相同,默认黑色
+            }
+            $('body').barrager(item);
+            //索引自增
+            index++;
+            //所有弹幕发布完毕，清除计时器。
+            if (index == total) {
+              clearInterval(looperValine);
+              if (themeLoop === true) {
+                setTimeout(function () {
+                  do_barrager();
+                }, 5000);
+              } else {
+                $('.danmuBtn').removeClass('open');
+              }
+              return false;
+            }
+
+          }
+        })
+      }
+    }
+  };
+  $(document).ready(load_valine);
+  document.addEventListener('pjax:send', function (e) {
+    
+  })
+  document.addEventListener('pjax:complete', function () {
+    load_valine();
+  });
+</script>
+    
+
+
+<!-- 鼠标点击特效 -->
+<!-- 爱心点击 -->
+
+	
+		<script src="/js/cursor/text.js"></script>
+	
+
+
+
+
+    <!-- pjax -->
+    
+
+<!-- pjax -->
+
+
+  <script src="/js/pjax@0.2.8/index.js"></script>
+  
+    <!-- 样式位于：source/css/_third-party/pjaxanimate.styl -->
+
+<div class="pjax-animate">
+  
+    <div class="loading-circle"><div id="loader-circle"></div></div>
+    <script>
+      window.ShowLoading = function() {
+        $(".loading-circle").css("display", "block");
+      };
+      window.HideLoading = function() {
+        $(".loading-circle").css("display", "none");
+      }
+    </script>
+  
+	<script>
+    document.addEventListener('pjax:complete', function () {
+      window.HideLoading();
+    })
+    document.addEventListener('pjax:send', function () {
+      window.ShowLoading();
+    })
+    document.addEventListener('pjax:error', function () {
+      window.HideLoading();
+    })
+	</script>
+</div>
+
+  
+
+  <script>
+    var pjax = new Pjax({
+      elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"])',   // 拦截正常带链接的 a 标签
+      selectors: ["#pjax-container","title"],                                   // 根据实际需要确认重载区域
+      cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+      timeout: 5000
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      $(window).unbind('resize');
+      $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+  </script>
+
+
+
+  </body>
 </html>
