@@ -174,7 +174,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #fff;
 }
 .bg-floor {
-  background: ;
+  background: #eaeaea;
   background-size: cover;
   transition: all 0.3s;
 }
