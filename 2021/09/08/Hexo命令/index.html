@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Hexo指令 | 全息阁</title>
+  <title>Hexo的一些命令 | 全息阁</title>
 
   
     
@@ -496,7 +496,7 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/8.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/3.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
@@ -504,7 +504,7 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        Hexo指令
+        Hexo的一些命令
       </span>
     </div>
     
@@ -546,35 +546,45 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <h1 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h1><p>使用 「<a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js</a>」的 <code>npm</code> 命令安装 [Hexo](<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">文档 | Hexo</a>) 。</p>
+        <h1 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h1><p>使用 「<a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js</a>」的 <code>npm</code> 命令安装 [Hexo](<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">文档 | Hexo</a>) 。（国内镜像<code>cnpm</code>）</p>
 <p>// 这是全局安装，cli = Command Line Interface 命令行界面</p>
-<blockquote>
-<p>npm install -g hexo-cli</p>
-</blockquote>
-<p>// 这是局部安装</p>
-<blockquote>
-<p>npm install hexo</p>
-</blockquote>
-<h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><h2 id="生成hexo项目"><a href="#生成hexo项目" class="headerlink" title="生成hexo项目"></a>生成hexo项目</h2><p>// 当前目录下创建一个名为folder的项目文件夹</p>
-<blockquote>
-<p>hexo init folder</p>
-</blockquote>
-<h2 id="新建一个文章"><a href="#新建一个文章" class="headerlink" title="新建一个文章"></a>新建一个文章</h2><p>// 在 <code>_post</code> 文件夹下新建标题是title的md文档。</p>
-<blockquote>
-<p>hexo new “title”    </p>
-</blockquote>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
+<p>// 这是局部安装</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br></pre></td></tr></table></figure>
+
+<h1 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h1><p>// 当前目录下创建一个名为blog的项目文件夹</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+
+<p>生成（generate）静态界面</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>本地服务（server）</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>部署（deploy）网站</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<p>清理（clean）缓存文件（db.json）</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+
+<h1 id="新建一个文章"><a href="#新建一个文章" class="headerlink" title="新建一个文章"></a>新建一个文章</h1><p>// 在 <code>_post</code> 文件夹下新建标题是title的md文档。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;title&quot;	</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1>
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/Hexo/" class="">
-              Hexo
+            <a href="/tags/hexo/" class="">
+              hexo
             </a>
           
-            <a href="/tags/%E5%91%BD%E4%BB%A4/" class="">
-              命令
+            <a href="/tags/%E6%8C%87%E4%BB%A4/" class="">
+              指令
             </a>
           
         </div>
@@ -588,7 +598,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2021/09/08/Hexo命令/" target="_blank" title="Hexo指令">http://ling0shang.github.io/2021/09/08/Hexo命令/</a>
+    <a href="/2021/09/08/Hexo命令/" target="_blank" title="Hexo的一些命令">http://ling0shang.github.io/2021/09/08/Hexo命令/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -610,18 +620,16 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/13.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/07/30/latex%E5%85%AC%E5%BC%8F/" class="post-nav-link">
+    <a href="/2021/07/20/hello-world/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text"></div>
+        <div class="title-text">Hello World</div>
       </div>
       <!-- <div class="content">
-        #字体
-##字体大小
-12345678910111213141516171819202122Hello Latex.\t
+        Welcome to Hexo! This is your very first post. Check documen
       </div> -->
     </a>
   </div>
