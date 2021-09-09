@@ -547,11 +547,6 @@
             <div class="post-categories">
               <!-- 文章详情页的分类 -->
 
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E9%9C%93%E8%99%B9/">霓虹</a>
-</div>
-
 
             </div>
           </div>
@@ -705,14 +700,14 @@
   class=""
   server="tencent"
   type="playlist"
-  id="8062553743"
+  id="8155261915"
   fixed='true'
   autoplay='true'
   theme='#42b983'
   loop='all'
   order='random'
   preload='auto'
-  volume='0.12'
+  volume='0.35'
   list-folded='true'
 >
 </meting-js>
@@ -1211,6 +1206,27 @@
 
       $(window).unbind('resize');
       $(window).unbind('scroll');
+      $(document).unbind('scroll');
+      $(document).unbind('click');
+      $('body').unbind('click');
+
+    })
+    
+    document.addEventListener('pjax:complete', function () {
+      $('script[data-pjax], .pjax-reload script').each(function () {
+        $(this).parent().append($(this).remove());
+      });
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      window.location.href = e.triggerElement.href;
+    })
+  </script>
+
+
+
+  </body>
+</html>croll');
       $(document).unbind('scroll');
       $(document).unbind('click');
       $('body').unbind('click');
