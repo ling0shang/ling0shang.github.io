@@ -504,7 +504,7 @@
   <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
     
       <swiper-slide>
-        <div class="item swiper-lazy" data-background="/medias/11.jpg" style="background-size: 300000px; 
+        <div class="item swiper-lazy" data-background="/medias/7.jpg" style="background-size: 300000px; 
           background-position: left center;" style="position: relative;">
           <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
             <div class="flag">
@@ -516,7 +516,7 @@
                 <div class="swiper-video-maskBox"></div>
               </div>
               
-              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/11.jpg" style="height: 100%; background-size: cover; 
+              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/7.jpg" style="height: 100%; background-size: cover; 
                 background-position: center center;">
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
               </div>
@@ -1786,7 +1786,7 @@
 <!-- 具体js，请前往valine/script.ejs查看 -->
 
         <script>
-  var requiredFields = '';
+  var requiredFields = 'nick,mail';
   requiredFields = requiredFields.split(',');
   comment_el = '.comment';
   let looperValine = null;
@@ -1797,11 +1797,11 @@
         path: window.location.pathname,
         notify: false,
         verify: false,
-        app_id: "",
-        app_key: "",
-        placeholder: "客官，说点什么吧",
-        avatar: "",
-        master: "",   //博主邮箱md5
+        app_id: "XQLwjkCLlso0zR2J7B7hmkvf-gzGzoHsz",
+        app_key: "HbbIXUR43VqDAIKQ0oTKeuPw",
+        placeholder: "看官，说点什么吧",
+        avatar: "mp",
+        master: "9d730317a4450b2dbc155be98ec45ae1",   //博主邮箱md5
         tagMeta: ["博主","小伙伴","访客"],     //标识字段名
         friends: "",
         metaPlaceholder: { "nick": "昵称/QQ号", "mail": "邮箱" },
