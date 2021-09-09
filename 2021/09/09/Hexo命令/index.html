@@ -547,17 +547,17 @@
       
       <div class="post-content">
         <p>官方文档：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">指令 | Hexo</a></p>
-<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>使用 「<a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js</a>」的 <code>npm</code> 命令安装 [Hexo](<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">文档 | Hexo</a>) 。（国内镜像<code>cnpm</code>）</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>使用 「<a target="_blank" rel="noopener" href="https://nodejs.org/en/">node.js</a>」的 <code>npm</code> 命令安装 [Hexo](<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo">文档 | Hexo</a>) 。（国内镜像<code>cnpm</code>）</p>
 <p>// 这是全局安装，cli = Command Line Interface 命令行界面</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
 <p>// 这是局部安装</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br></pre></td></tr></table></figure>
 
-<h1 id="Hexo指令"><a href="#Hexo指令" class="headerlink" title="Hexo指令"></a>Hexo指令</h1><h2 id="int"><a href="#int" class="headerlink" title="int"></a>int</h2><p>// 初始化指令，会在当前目录下创建一个名为blog的项目文件夹</p>
+<h2 id="Hexo指令"><a href="#Hexo指令" class="headerlink" title="Hexo指令"></a>Hexo指令</h2><h3 id="int"><a href="#int" class="headerlink" title="int"></a>int</h3><p>// 初始化指令，会在当前目录下创建一个名为blog的项目文件夹</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
 
-<h2 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h2><p>//生成静态界面</p>
+<h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><p>//生成静态界面</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
 <p>还可以加上后缀以简化指令步骤：</p>
@@ -577,7 +577,7 @@
 <td align="left">监视文件变动</td>
 </tr>
 </tbody></table>
-<h2 id="server"><a href="#server" class="headerlink" title="server"></a>server</h2><p>//本地服务（server）访问页面</p>
+<h3 id="server"><a href="#server" class="headerlink" title="server"></a>server</h3><p>//本地服务（server）访问页面</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 
 <p>同样地，还可以加上后缀以简化指令步骤：</p>
@@ -601,7 +601,7 @@
 <td align="left">启动日记记录，使用覆盖记录格式</td>
 </tr>
 </tbody></table>
-<h2 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h2><p>//部署（deploy）网站</p>
+<h3 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h3><p>//部署（deploy）网站</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>加上后缀以简化指令步骤：</p>
@@ -617,23 +617,23 @@
 <td align="left">部署之前预先生成静态文件</td>
 </tr>
 </tbody></table>
-<h2 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h2><p>//清理缓存文件（<code>db.json</code>）和已生成的静态文件（<code>public</code>）</p>
+<h3 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h3><p>//清理缓存文件（<code>db.json</code>）和已生成的静态文件（<code>public</code>）</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
 
-<h2 id="new"><a href="#new" class="headerlink" title="new"></a>new</h2><h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>// 默认在 <code>_post</code> 文件夹下新建标题是title的md文档。</p>
+<h3 id="new"><a href="#new" class="headerlink" title="new"></a>new</h3><h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><p>// 默认在 <code>_post</code> 文件夹下新建标题是title的md文档。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;title&quot;	</span><br></pre></td></tr></table></figure>
 
-<h3 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h3><p>//<code>source</code>文件夹下新建页面，比如分类页面</p>
+<h4 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h4><p>//<code>source</code>文件夹下新建页面，比如分类页面</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
 
-<h2 id="list"><a href="#list" class="headerlink" title="list"></a>list</h2><p>//列出你的网站一些资料。</p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>//列出你的网站一些资料。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo list <span class="xml"><span class="tag">&lt;<span class="name">type</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <p><code>&lt;type&gt;</code>用你想看的类型代替。比如，我想查看「归档」的信息。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo list post</span><br></pre></td></tr></table></figure>
 
 <p>常见的type有：page, post, route, tag, category</p>
-<h2 id="version"><a href="#version" class="headerlink" title="version"></a>version</h2><p>//显示hexo版本</p>
+<h3 id="version"><a href="#version" class="headerlink" title="version"></a>version</h3><p>//显示hexo版本</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo v</span><br></pre></td></tr></table></figure>
 
 
