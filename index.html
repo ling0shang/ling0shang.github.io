@@ -504,7 +504,7 @@
   <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
     
       <swiper-slide>
-        <div class="item swiper-lazy" data-background="/medias/7.jpg" style="background-size: 300000px; 
+        <div class="item swiper-lazy" data-background="/medias/10.jpg" style="background-size: 300000px; 
           background-position: left center;" style="position: relative;">
           <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
             <div class="flag">
@@ -516,7 +516,7 @@
                 <div class="swiper-video-maskBox"></div>
               </div>
               
-              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/7.jpg" style="height: 100%; background-size: cover; 
+              <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="/medias/10.jpg" style="height: 100%; background-size: cover; 
                 background-position: center center;">
                 <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
               </div>
@@ -1217,6 +1217,8 @@
 		
 			
 		
+			
+		
 	</div>
 </div>
 
@@ -1227,6 +1229,67 @@
 <section class="posts">
   
     <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-09-12</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/09/12/Anaconda%E5%91%BD%E4%BB%A4/">Anaconda命令</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8C%87%E4%BB%A4/" rel="tag">指令</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              
+              <a href="/2021/09/12/Anaconda%E5%91%BD%E4%BB%A4/" class="lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            Anaconda Promptversion//查看当前版本 （-V = --version
+1conda --version
+
+更新 conda1conda update conda
+
+虚拟环境管理查看所有虚拟环境//列出（list）所有
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/09/12/Anaconda%E5%91%BD%E4%BB%A4/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/09/12/Anaconda%E5%91%BD%E4%BB%A4/" class="lazyload" data-original="/medias/3.jpg" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+  
+    <article class="post" data-aos="fade-up" style="   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1249,7 +1312,7 @@
 
 <div class="article-category">
   <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a> <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/hexo/">hexo</a>
+  <a class="article-category-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
 </div>
 
 
@@ -1272,7 +1335,7 @@
         </div>
         <div class="post-more">
           <a href="/2021/09/09/Hexo%E5%91%BD%E4%BB%A4/">
-            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1285,7 +1348,7 @@
       </div>
     </article>
   
-    <article class="post" data-aos="fade-up" style="   ">
+    <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;   ">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -1323,7 +1386,7 @@
         </div>
         <div class="post-more">
           <a href="/2021/07/20/hello-world/">
-            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -1536,7 +1599,7 @@
 <script src="/js/tocbot/tocbot.min.js"></script>
 
 <script>
-  var headerEl = 'h2, h3, h4',  //headers 
+  var headerEl = 'h1, h2, h3, h4, h5, h6',  //headers 
       content = '.post-detail',//文章容器
       idArr = {};  //标题数组以确定是否增加索引id
       //add #id
